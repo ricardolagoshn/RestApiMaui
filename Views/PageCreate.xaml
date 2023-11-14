@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestApiMaui.Views.PageCreate"
+             Title="PageCreate">
+    <VerticalStackLayout>
+        <StackLayout>
+            <Image x:Name="fotoImage" Source="placeholder_image.png" BackgroundColor="Azure" HeightRequest="300" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+            <Button Text="Seleccionar Imagen" Clicked="Button_Clicked_1" />
+            <Entry Placeholder="Nombres" x:Name="nombresEntry" />
+            <Entry Placeholder="Apellidos" x:Name="apellidosEntry" />
+            <Entry Placeholder="Fecha de Nacimiento" x:Name="fechaNacEntry" />
+            <Entry Placeholder="Correo" x:Name="correoEntry" />
+            <Button Text="Guardar" Clicked="Button_Clicked" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
