@@ -15,7 +15,7 @@ public partial class PageCreate : ContentPage
         {
             using (MemoryStream memory = new MemoryStream())
             {
-                Stream stream = null; //photo.GetStream();
+                Stream stream = photo.OpenReadAsync().Result; //photo.GetStream();
                 stream.CopyTo(memory);
                 byte[] fotobyte = memory.ToArray();
 
@@ -35,7 +35,7 @@ public partial class PageCreate : ContentPage
         {
             using (MemoryStream memory = new MemoryStream())
             {
-                Stream stream = null; //photo.GetStream();
+                Stream stream = photo.OpenReadAsync().Result; //photo.GetStream()
                 stream.CopyTo(memory);
                 byte[] fotobyte = memory.ToArray();
 
@@ -55,7 +55,7 @@ public partial class PageCreate : ContentPage
             apellidos = apellidosEntry.Text,
             fechanac = fechaNacEntry.Text,
             correo = correoEntry.Text,
-            foto = GetByteArray()
+            foto = Getimage64()
         };
 
         Models.Msg msg = await Controllers.EmpleController.CreateEmple(emple);

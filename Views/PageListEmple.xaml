@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RestApiMaui.Views.PageListEmple"
+             xmlns:conver="clr-namespace:RestApiMaui.Config"
+             Title="PageListEmple">
+
+    <ContentPage.Resources>
+        <conver:Base64toImage x:Key="BaseArray" />
+    </ContentPage.Resources>
+    
+    <VerticalStackLayout>
+        <CollectionView x:Name="listemp">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image Grid.Column="0" 
+                               x:Name="imagen"
+                               Source="{Binding foto, Converter={StaticResource BaseArray}}"
+                               />
+
+                        <Label Grid.Column="1"  Text="{Binding nombres}" />
+
+                        <Label Grid.Column="2"  Text="{Binding apellidos}" />
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

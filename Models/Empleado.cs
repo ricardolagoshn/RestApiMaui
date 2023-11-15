@@ -13,6 +13,6 @@ namespace RestApiMaui.Models
         public string apellidos { get; set; }
         public string fechanac { get; set; }
         public string correo { get; set; }
-        public byte[] foto { get; set; }
+        public string foto { get; set; }
     }
 }
