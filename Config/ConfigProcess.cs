@@ -13,8 +13,8 @@ namespace RestApiMaui.Config
         public static string postRoute = "create";
 
 
-        public static string EndpointPost = "http://192.168.164.166/ApiEmple/public/empleados/create";
-        public static string EndpointGet = "http://192.168.164.166/ApiEmple/public/empleados/show";
+        public static string EndpointPost = "http://192.168.0.4/ApiEmple/public/empleados/create";
+        public static string EndpointGet = "http://192.168.0.4/ApiEmple/public/empleados/show";
 
 
 
